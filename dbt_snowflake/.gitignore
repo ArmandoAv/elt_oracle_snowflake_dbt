@@ -1,0 +1,5 @@
+dbtsnowflake/target/
+dbtsnowflake/dbt_packages/
+dbtsnowflake/logs/
+venv/
+logs/

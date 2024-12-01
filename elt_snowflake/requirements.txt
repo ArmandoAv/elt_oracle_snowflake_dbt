@@ -1,0 +1,5 @@
+cx_Oracle
+python-decouple
+python-dotenv
+pandas
+snowflake-connector-python

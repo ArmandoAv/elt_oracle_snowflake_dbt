@@ -1,0 +1,51 @@
+-- Connect with the user SYSTEM
+
+-- Create DBT User
+CREATE USER <DBT_USER> IDENTIFIED BY <DBT_PWD>;
+
+-- Grants DBT User
+GRANT CREATE SESSION TO <DBT_USER>;
+GRANT CREATE TABLE TO <DBT_USER>;
+GRANT CREATE INDEX TO <DBT_USER>;
+GRANT CREATE SEQUENCE TO <DBT_USER>;
+GRANT CREATE VIEW TO <DBT_USER>;
+GRANT CREATE PROCEDURE TO <DBT_USER>;
+
+-- Grants objects
+GRANT INSERT, UPDATE, DELETE, SELECT ON <DBT_USER>.* TO <DBT_USER>;
+
+-- Tablespace DBT User
+ALTER USER <DBT_USER> DEFAULT TABLESPACE USERS;
+ALTER USER <DBT_USER> QUOTA UNLIMITED ON USERS;
+
+-- Query tablespace
+SELECT *
+FROM   DBA_TABLESPACES;
+
+SELECT DEFAULT_TABLESPACE
+FROM   DBA_USERS
+WHERE  USERNAME = '<DBT_USER>';
+
+
+-- Connect with the user DBT
+-- Create tables
+CREATE TABLE hosts (
+    id NUMBER PRIMARY KEY,
+    name VARCHAR2(255),
+    is_superhost CHAR(1),
+    created_at TIMESTAMP(0),
+    updated_at TIMESTAMP(0)
+);
+
+CREATE TABLE listings (
+    id NUMBER PRIMARY KEY,
+    listing_url VARCHAR2(255),
+    name VARCHAR2(255),
+    room_type VARCHAR2(50),
+    minimum_nights NUMBER,
+    host_id NUMBER,
+    price VARCHAR2(10),
+    created_at TIMESTAMP(0),
+    updated_at TIMESTAMP(0)
+);
+
