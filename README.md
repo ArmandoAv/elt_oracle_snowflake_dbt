@@ -170,7 +170,7 @@ http://localhost:8080/home
 
 ## Architecture
 
-The process is divided into three parts, as can be seen in the following figure.
+The process is divided into three parts, as can be seen in the following diagram.
 
 ![Architecture](https://github.com/ArmandoAv/elt_oracle_snowflake_dbt/blob/main/architecture/ELT%20process.png)
 
@@ -181,7 +181,7 @@ Below, you will see the steps to execute the process.
 To run this project, you first need to make a copy of the files and directories, this can be done with the following command in a cmd terminal
 
 ```
-git clone https://github.com/ArmandoAv/etl_pyspark.git
+git clone https://github.com/ArmandoAv/elt_oracle_snowflake_dbt
 ```
 
 Once you have all the files locally, you should check the following folders:
@@ -310,7 +310,7 @@ SNOW_STAGE = RAW_FILES
 ```
 
 > [!NOTE]
-> In the Oracle part, you must enter the username and password that was created with the help of the Data_Model_Oracle.sql script. For the IP, you must enter the IP that comes out of the ipconfig command in the Ethernet adapter vEthernet ( WSL): section; the IPv4 Address value.
+> In the Oracle part, you must enter the username and password that was created with the help of the Data_Model_Oracle.sql script. For the IP, you must enter the IP that comes out of the **ipconfig** command in the Ethernet adapter vEthernet ( WSL): section; the IPv4 Address value.
 > In the Snowflake part, you must enter the account, username and password to enter the Snowflake console.
 
 Once the .env file has been created, the following commands must be executed to execute the Snowflake tables loading process:
@@ -515,7 +515,7 @@ http://localhost:8080/home
 Once the Airflow console has been opened, in the same console the following variables must be created with their respective values:
 
 ```
-dbt_snowflake_path			/mnt/c/<path_dbt_snowflake>/dbtsnowflake/
+dbt_snowflake_path		/mnt/c/<path_dbt_snowflake>/dbtsnowflake/
 extract_snowflake_script	/mnt/c/<path_elt_snowflake>/src/extract.py
 load_snowflake_script		/mnt/c/<path_elt_snowflake>/src/load.py
 
@@ -526,10 +526,24 @@ Once the variables have been created and the DAGs are visible in the Airflow con
 1. elt_snowflake_dag
 1. dbt_snowflake_dag
 
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+1. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+1. Adding your changes in the staging area (`git add -A`)
+1. Commit your changes with your comments (`git commit -m 'Add some AmazingFeature'`)
+1. Push to the branch (`git push origin feature/AmazingFeature`)
+1. Open a Pull Request
+
 ## Contact
 
 You can contact me in my LinkedIn profile
 
 Armando Avila - [@Armando Avila](https://www.linkedin.com/in/armando-avila-419a8623/)
 
-Project Link: [https://github.com/ArmandoAv/etl_pyspark](https://github.com/ArmandoAv/etl_pyspark)
+Project Link: [https://github.com/ArmandoAv/etl_pyspark](https://github.com/ArmandoAv/elt_oracle_snowflake_dbt)
