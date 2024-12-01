@@ -172,7 +172,7 @@ http://localhost:8080/home
 
 The process is divided into three parts, as can be seen in the following figure.
 
-![Architecture](C:\Users\Armando\Desktop\git\elt_oracle_snowflake_dbt\architecture\ELT process.png)
+![Architecture](https://github.com/ArmandoAv/elt_oracle_snowflake_dbt/blob/main/architecture/ELT%20process.png)
 
 Below, you will see the steps to execute the process.
 
@@ -197,11 +197,13 @@ Each of the folders will be seen as independent processes.
 
 In this folder there are the scripts and files to load the Oracle tables that were previously generated. This folder has the following structure:
 
+```
 load_oracle
 ├── bads 
 ├── ctl 
 ├── data 
 └── logs
+```
 
 #### bads
 
@@ -263,9 +265,11 @@ quit
 
 In this folder are the scripts and files to load the Snowflake tables that were previously generated. This folder has the following structure:
 
+```
 etl_snowflake
 ├── src
 └── tmp
+```
 
 #### src
 
@@ -321,13 +325,16 @@ python load.py
 
 In this folder are the scripts and files to load the Snowflake tables with DBT. This folder has the following structure:
 
+```
 dbt_snowflake
 └── dbtsnowflake
+```
 
 #### dbtsnowflake
 
 In this folder is the DBT project with all the necessary files and scripts. This folder has the following structure:
 
+```
 dbtsnowflake
 ├── analyses 
 ├── assets 
@@ -337,6 +344,7 @@ dbtsnowflake
 ├── seeds 
 ├── snapshot 
 └── tests
+```
 
 ##### analyses
 
