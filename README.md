@@ -546,4 +546,4 @@ You can contact me in my LinkedIn profile
 
 Armando Avila - [@Armando Avila](https://www.linkedin.com/in/armando-avila-419a8623/)
 
-Project Link: [https://github.com/ArmandoAv/etl_pyspark](https://github.com/ArmandoAv/elt_oracle_snowflake_dbt)
+Project Link: [https://github.com/ArmandoAv/elt_oracle_snowflake_dbt](https://github.com/ArmandoAv/elt_oracle_snowflake_dbt)
